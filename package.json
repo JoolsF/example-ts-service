@@ -1,0 +1,14 @@
+{
+  "name": "ts-music-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Julian Fenner",
+  "license": "MIT",
+  "scripts": {
+    "run:local": "yarn check && tsx ./src/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.16.5",
+    "typescript": "^5.5.4"
+  }
+}
