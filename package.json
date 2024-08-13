@@ -5,14 +5,19 @@
   "author": "Julian Fenner",
   "license": "MIT",
   "scripts": {
-    "run:local": "yarn tsx ./src/index.ts" 
+    "run:local": "yarn tsx ./src/index.ts"
   },
   "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/eslint": "^9",
     "@types/node": "^22.2.0",
+    "eslint": "^9.9.0",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "tsx": "^4.16.5",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0"
   },
   "repository": "git@github.com:JoolsF/ts-music-library.git",
   "packageManager": "yarn@4.4.0",
