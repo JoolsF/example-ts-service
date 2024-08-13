@@ -5,11 +5,18 @@
   "author": "Julian Fenner",
   "license": "MIT",
   "scripts": {
-    "run:local": "yarn check && tsx ./src/index.ts"
+    "run:local": "yarn tsx ./src/index.ts" 
   },
   "devDependencies": {
+    "@types/node": "^22.2.0",
     "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
     "tsx": "^4.16.5",
     "typescript": "^5.5.4"
+  },
+  "repository": "git@github.com:JoolsF/ts-music-library.git",
+  "packageManager": "yarn@4.4.0",
+  "dependencies": {
+    "yarn-check": "^0.0.3"
   }
 }
