@@ -8,6 +8,7 @@
     "run:local": "yarn check && tsx ./src/index.ts"
   },
   "devDependencies": {
+    "prettier": "^3.3.3",
     "tsx": "^4.16.5",
     "typescript": "^5.5.4"
   }
