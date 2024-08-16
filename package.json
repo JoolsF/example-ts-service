@@ -22,6 +22,7 @@
   "repository": "git@github.com:JoolsF/ts-music-library.git",
   "packageManager": "yarn@4.4.0",
   "dependencies": {
+    "fastify": "^4.28.1",
     "yarn-check": "^0.0.3"
   }
 }
