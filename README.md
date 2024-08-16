@@ -2,7 +2,7 @@
 
 TODO
 * Install deps
-  * Vitest
+  * X Vitest
   * Zod (validation)
   * Axios (http client)
   * X Fastify (http server) 

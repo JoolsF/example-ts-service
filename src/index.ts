@@ -7,7 +7,6 @@ const start = async () => {
         logger: true
     });
 
-
     await registerMaintenanceRoutes(server)
 
     try {
@@ -17,7 +16,6 @@ const start = async () => {
         throw err
     }
 }
-
 
 start().catch((err) => {
     // TODO log
