@@ -1,5 +1,6 @@
 import Fastify, { type FastifyInstance } from 'fastify';
-import { registerMaintenanceRoutes } from "./routes"
+import { registerApiRoutes, registerMaintenanceRoutes } from "./routes"
+import { TestHttpClientImpl } from './testclient';
 
 const start = async () => {
 
@@ -7,7 +8,10 @@ const start = async () => {
         logger: true
     });
 
+    const client = new TestHttpClientImpl(require('axios').default)
+
     await registerMaintenanceRoutes(server)
+    await registerApiRoutes(server, client)
 
     try {
         server.listen({ port: 3000 })
