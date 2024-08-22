@@ -1,4 +1,4 @@
-# Music Library
+# Example Typescript service
 
 TODO
 * Install deps
