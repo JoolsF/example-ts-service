@@ -1,5 +1,7 @@
 name: Reusable Workflow
 
+run-name: "foo"
+
 on:
   workflow_call:
     inputs:
@@ -11,7 +13,7 @@ on:
         type: string
         default: 'default-2'
 
-run-name: ${{ inputs.run-name }}
+# run-name: ${{ inputs.run-name }}
 
 jobs:
   echo_message:
