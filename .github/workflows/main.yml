@@ -1,15 +1,15 @@
-# name: CI
-# on: push
+name: CI
+on: push
 
-# jobs:
-#   test:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Echo Hello World
-#         run: echo "Hello, World!"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Hello World
+        run: echo "Hello, World!"
 
-#   call_reusable_workflow:
-#     needs: test
-#     uses: ./.github/workflows/reusable-workflow.yml
-#     with:
-#       message: "Hello from the caller workflow!"
+  call_reusable_workflow:
+    needs: test
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      message: "Hello from the caller workflow!"
