@@ -1,4 +1,5 @@
 name: CI
+run-name: bar
 on: push
 
 jobs:
