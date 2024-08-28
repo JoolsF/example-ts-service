@@ -1,15 +1,15 @@
-# name: Reusable Workflow
+name: Reusable Workflow
 
-# on:
-#   workflow_call:
-#     inputs:
-#       message:
-#         required: true
-#         type: string
+on:
+  workflow_call:
+    inputs:
+      message:
+        required: true
+        type: string
 
-# jobs:
-#   echo_message:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Echo the message
-#         run: echo "Reusable workflow message ${{ inputs.message }}"
+jobs:
+  echo_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the message
+        run: echo "Reusable workflow message ${{ inputs.message }}"
