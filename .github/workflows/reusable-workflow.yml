@@ -1,9 +1,11 @@
 name: Reusable Workflow
-run-name: >-
-  if [[ ${{ inputs.run-name }} == '' ]]; then
-    Foo ${{ github.head_ref}} ${{ github.ref_name}}
-  else
-    ${{ inputs.run-name }} 
+# run-name: >-
+#   if [[ ${{ inputs.run-name }} == '' ]]; then
+#     Foo ${{ github.head_ref}} ${{ github.ref_name}}
+#   else
+#     ${{ inputs.run-name }} 
+
+run-name: Test name 
 
 on:
   workflow_call:
