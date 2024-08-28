@@ -1,5 +1,6 @@
 name: CI
 on: push
+run-name: Run-name
 
 jobs:
   test:
