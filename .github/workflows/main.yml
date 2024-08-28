@@ -1,10 +1,5 @@
 name: CI
 on: push
-run-name: >-
-  if [[ ${{ github.head_ref }} == '' ]]; then
-    Foo ${{ github.head_ref}} ${{ github.ref_name}}
-  else
-    Bar ${{  github.ref_name }} 
 
 jobs:
   test:
@@ -18,4 +13,3 @@ jobs:
     uses: ./.github/workflows/reusable-workflow.yml
     with:
       message: "Hello from the caller workflow!"
-      # run-name: "test-run-name"

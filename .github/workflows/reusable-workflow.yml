@@ -1,11 +1,4 @@
 name: Reusable Workflow
-# run-name: >-
-#   if [[ ${{ inputs.run-name }} == '' ]]; then
-#     Foo ${{ github.head_ref}} ${{ github.ref_name}}
-#   else
-#     ${{ inputs.run-name }} 
-
-run-name: Test name 
 
 on:
   workflow_call:
@@ -13,14 +6,10 @@ on:
       message:
         required: true
         type: string
-      run-name:
-        required: false
-        type: string
-        default: ''
 
 jobs:
   echo_message:
     runs-on: ubuntu-latest
     steps:
       - name: Echo the message
-        run: echo "Reusable workflow message ${{ inputs.message }}, run-name ${{ inputs.run-name}}"
+        run: echo "Reusable workflow message ${{ inputs.message }}"
