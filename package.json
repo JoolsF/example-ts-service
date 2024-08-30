@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "run:local": "yarn tsx ./src/index.ts",
+    "run:local:docker": "docker compose -f ./docker/docker-compose.yml up -d && yarn tsx ./src/index.ts",
     "test": "vitest"
   },
   "devDependencies": {

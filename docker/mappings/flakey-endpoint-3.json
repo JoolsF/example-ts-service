@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/flakey-endpoint"
+  },
+  "response": {
+    "status": 200,
+    "body": "OK",
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  },
+  "scenarioName": "Flakey Scenario",
+  "requiredScenarioState": "SecondRequest",
+  "newScenarioState": "FinalState"
+}

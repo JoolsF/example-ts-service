@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/your-endpoint"
+  },
+  "response": {
+    "status": 400,
+    "body": "Bad Request"
+  }
+}

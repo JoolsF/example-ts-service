@@ -1,5 +1,7 @@
 # Example Typescript service
 
+Example TS Fastify server used for learning the TS language and related libraries.
+
 TODO Deps
 * Now
   * X Vitest
@@ -17,6 +19,4 @@ TODO Requirements
   * Persistence of retreived data to dynamo for caching
   * Background streaming task
   * Github actions for dep management, linting etc
-* Later
-  * Deploy to AWS using Terraform
  

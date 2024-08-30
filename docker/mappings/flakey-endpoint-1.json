@@ -1,0 +1,16 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/flakey-endpoint"
+  },
+  "response": {
+    "status": 400,
+    "body": "Bad Request",
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  },
+  "scenarioName": "Flakey Scenario",
+  "requiredScenarioState": "Started",
+  "newScenarioState": "FirstRequest"
+}

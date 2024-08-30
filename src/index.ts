@@ -1,6 +1,7 @@
 import Fastify, { type FastifyInstance } from 'fastify';
 import { registerApiRoutes, registerMaintenanceRoutes } from "./routes"
 import { TestHttpClientImpl } from './testclient';
+import { TestFlakeyHttpClientImpl } from './test-flakey-client';
 
 const start = async () => {
 
@@ -9,9 +10,10 @@ const start = async () => {
     });
 
     const client = new TestHttpClientImpl(require('axios').default)
+    const flakeyClient = new TestFlakeyHttpClientImpl(require('axios').default)
 
     await registerMaintenanceRoutes(server)
-    await registerApiRoutes(server, client)
+    await registerApiRoutes(server, client, flakeyClient)
 
     try {
         server.listen({ port: 3000 })
