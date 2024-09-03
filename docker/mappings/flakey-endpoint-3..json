@@ -11,6 +11,6 @@
     }
   },
   "scenarioName": "Flakey Scenario",
-  "requiredScenarioState": "FirstRequest",
-  "newScenarioState": "SecondRequest"
+  "requiredScenarioState": "ThirdRequest",
+  "newScenarioState": "FourthRequest"
 }

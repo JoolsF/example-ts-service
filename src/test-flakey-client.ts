@@ -1,4 +1,4 @@
-import { AxiosStatic } from "axios"
+import { AxiosInstance, AxiosStatic } from "axios"
 
 export interface TestFlakeyHttpClient {
     testFlakyClient: () => Promise<void>
@@ -13,7 +13,7 @@ export interface DataItem {
 
 export class TestFlakeyHttpClientImpl implements TestFlakeyHttpClient {
 
-    constructor(private client: AxiosStatic) {
+    constructor(private client: AxiosInstance) {
 
     }
 
