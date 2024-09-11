@@ -2,8 +2,7 @@
 
 Example TS Fastify-based web service, used for learning the TS language and related libraries.  
 
-It implements a simple task management backend with a REST api.  A GraphQL may be added for learning purposes even though it is probably overkill.  
-This could be used to simplify queries around, for example, tags on different notes.
+It implements a simple task management backend with a REST api.  A GraphQL may be added for learning purposes even though it is probably overkill.  This could be used to simplify queries around, for example, tags on different notes.
 
 
 TODO Deps
