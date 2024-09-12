@@ -18,7 +18,7 @@ const start = async () => {
     await registerApiRoutes(server, client, flakeyClient)
 
     try {
-        server.listen({ port: 3000 })
+        server.listen({ port: 3000, host: '0.0.0.0' })
     } catch (err) {
         server.log.error(err)
         throw err
@@ -59,7 +59,8 @@ function getRetriableAxiosClient({ requestRetryLimit, delayFactor }: AxiosExpone
         retryDelay: (retryCount, error) =>
             exponentialDelay(retryCount, error, delayFactor),
         onRetry: (retryCount, error) => {
-            console.error(`Client request failed with error[${error}]. Retry count[${retryCount}], retrying....`)},
+            console.error(`Client request failed with error[${error}]. Retry count[${retryCount}], retrying....`)
+        },
         onMaxRetryTimesExceeded: () =>
             console.error("Maximum retry requests exceeded, aborting"),
         retryCondition: (err) => {

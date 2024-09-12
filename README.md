@@ -28,3 +28,20 @@ TODO Requirements
  * Note 'due dates / alerts' e.g. a note can be tagged with a date to give the user a heads up on an event.  Background task
 *  GraphQL API
  
+
+
+
+## Docker
+
+To package
+
+``` bash
+docker build --network=host -t example-ts-service .
+```
+
+To run
+
+```bash
+docker run -p 3000:3000 example-ts-service:latest
+```
+ 
