@@ -10,30 +10,30 @@ It implements a simple task management backend with a REST api.  A GraphQL may b
 Now
 
   - [x] Vitest
-  - [] Zod (validation)
+  - [ ] Zod (validation)
   - [x] Axios (http client)
   - [x] Fastify (http server) 
 
 Later
 
-  - [] ElectroDB (Dynamo)
-  - [] dd-trace-js (tracing)
-  - [] pino (logging)
-  - [] node-postgres
+  - [ ] ElectroDB (Dynamo)
+  - [ ] dd-trace-js (tracing)
+  - [ ] pino (logging)
+  - [ ] node-postgres
 
 ### TODO Requirements
 
 Now
-- [] Refactor to use type over interface and return function not class
+- [ ] Refactor to use type over interface and return function not class
 - [x] Simple note taking REST api
-- [] Persistence of retreived data to dynamo for caching
-- [] Github actions for dep management, linting etc
+- [ ] Persistence of retreived data to dynamo for caching
+- [ ] Github actions for dep management, linting etc
 
 Later
-  - [] User management
-  - [] Note tags
-  - [] Note 'due dates / alerts' e.g. a note can be tagged with a date to give the user a heads up on an event.  Background task
-  - [] GraphQL API
+  - [ ] User management
+  - [ ] Note tags
+  - [ ] Note 'due dates / alerts' e.g. a note can be tagged with a date to give the user a heads up on an event.  Background task
+  - [ ] GraphQL API
   
 
 
