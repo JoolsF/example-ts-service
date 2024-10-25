@@ -1,6 +1,7 @@
 import { FastifyInstance } from "fastify/types/instance"
 import { TestHttpClient } from "./testclient"
 import { TestFlakeyHttpClient } from "./test-flakey-client"
+import { createBook } from "./dynamo-client"
 
 export const registerMaintenanceRoutes = (server: FastifyInstance) =>
     server.get('/ping', async function handler(request, reply) {
@@ -26,5 +27,9 @@ export const registerApiRoutes = (server: FastifyInstance, client: TestHttpClien
         return {
             timezone: tz
         }
+    })
+
+    server.get('/test-db', async function handler(request, reply) {
+        return await createBook()
     })
 }

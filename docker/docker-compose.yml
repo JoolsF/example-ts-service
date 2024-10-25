@@ -9,6 +9,18 @@ services:
     volumes:
       - ./mappings:/home/wiremock/mappings
       - ./__files:/home/wiremock/__files
+  dynamodb-local:
+    image: amazon/dynamodb-local
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000" # Expose DynamoDB on port 8000
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx512m
+      # - AWS_REGION=eu-west-1
+      # - AWS_ACCESS_KEY_ID=dummy    # Dummy access key
+      # - AWS_SECRET_ACCESS_KEY=dummy # Dummy secret key
+      # - AWS_SDK_LOAD_CONFIG=1
+    command: "-jar DynamoDBLocal.jar -sharedDb"
 
 volumes:
   mappings:
