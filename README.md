@@ -24,7 +24,7 @@ Later
 ### TODO Requirements
 
 Now
-- [ ] Refactor to use type over interface and return function not class
+- [x] Refactor to use type over interface and return function not class
 - [x] Simple note taking REST api
 - [ ] Persistence of retreived data to dynamo for caching
 - [ ] Github actions for dep management, linting etc

@@ -1,9 +1,9 @@
 import Fastify, { type FastifyInstance } from 'fastify';
 import { registerApiRoutes, registerMaintenanceRoutes } from "./routes"
-import { TestHttpClientImpl } from './testclient';
-import { TestFlakeyHttpClientImpl } from './test-flakey-client';
 import axiosRetry, { exponentialDelay, IAxiosRetryConfig, IAxiosRetryReturn } from 'axios-retry';
-import axios, { AxiosInstance, AxiosStatic } from 'axios';
+import axios from 'axios';
+import { createdTestFlakeyHttpClient } from './test-flakey-client';
+import { createdTestHttpClient } from './testclient';
 
 const start = async () => {
 
@@ -11,8 +11,8 @@ const start = async () => {
         logger: true
     });
 
-    const client = new TestHttpClientImpl(axios)
-    const flakeyClient = new TestFlakeyHttpClientImpl(getRetriableAxiosClient({ requestRetryLimit: 6, delayFactor: 500 }))
+    const client = createdTestHttpClient(axios);
+    const flakeyClient = createdTestFlakeyHttpClient(getRetriableAxiosClient({ requestRetryLimit: 6, delayFactor: 500 }))
 
     await registerMaintenanceRoutes(server)
     await registerApiRoutes(server, client, flakeyClient)
