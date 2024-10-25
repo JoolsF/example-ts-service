@@ -36,7 +36,7 @@ TODO Requirements
 To package
 
 ``` bash
-docker build --network=host -t example-ts-service .
+docker build --network=host --build-arg TZ=UTC -t example-ts-service .
 ```
 
 To run
