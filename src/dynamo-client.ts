@@ -12,7 +12,7 @@ const client = new DynamoDB.DocumentClient({
       }
 });
 
-const table = 'test-table';
+const table = 'electro';
 
 const Book = new Entity({
     model: {

@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify/types/instance"
 import { TestHttpClient } from "./testclient"
 import { TestFlakeyHttpClient } from "./test-flakey-client"
-import { createBook } from "./dynamo-client"
+import { createBook, getBook } from "./dynamo-client"
 
 export const registerMaintenanceRoutes = (server: FastifyInstance) =>
     server.get('/ping', async function handler(request, reply) {
@@ -9,7 +9,7 @@ export const registerMaintenanceRoutes = (server: FastifyInstance) =>
     })
 
 export const registerApiRoutes = (server: FastifyInstance, client: TestHttpClient, flakeyClient: TestFlakeyHttpClient) => {
-    server.get('/test-api-route/foo/:id', async function handler(request, reply) {
+    server.get<{ Params: { id: string } }>('/test-api-route/foo/:id', async function handler(request, reply) {
         const { id } = request.params;
         const clientResponse = await client.fetchJson(Number(id)) //TODO Implement type safety for http inputs
 
@@ -29,7 +29,11 @@ export const registerApiRoutes = (server: FastifyInstance, client: TestHttpClien
         }
     })
 
-    server.get('/test-db', async function handler(request, reply) {
+    server.post('/book', async function handler(request, reply) {
         return await createBook()
+    })
+    
+    server.get('/book', async function handler(request, reply) {
+        return await getBook()
     })
 }

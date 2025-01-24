@@ -36,8 +36,6 @@ Later
   - [ ] GraphQL API
   
 
-
-
 ## Docker
 
 To package
@@ -52,3 +50,10 @@ To run
 docker run -p 3000:3000 example-ts-service:latest
 ```
  
+### To setup dynamo tables
+
+`docker/setup-dynamo.sh`
+
+### To list tables
+
+`docker/list-tables.sh`
