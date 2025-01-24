@@ -38,7 +38,7 @@ const Book = new Entity({
             type: "string",
         },
         condition: {
-            type: ["EXCELLENT", "GOOD", "FAIR", "POOR"] as const,
+            type: ["EXCELLENT", "GOOD", "FAIR", "POOR"] as const, //TODO avoid repetition here of DTO and Entity
             required: true,
         },
         genre: {
@@ -95,11 +95,23 @@ export async function createBook() {
       }).go();
 }
 
-export async function getBook(): Promise<any> { //TODO fix any
+type Book = {
+    storeId: string;
+    bookId: string;
+    price: number;
+    title?: string | undefined;
+    author?: string | undefined;
+    condition: "EXCELLENT" | "GOOD" | "FAIR" | "POOR";
+    genre?: string[] | undefined;
+    published?: string | undefined;
+}
+
+
+export async function getBook(): Promise<Book | null> {
     const book = await Book.get({
         bookId: "beedabe8-e34e-4d41-9272-0755be9a2a9f",
         storeId: "pdx-45",
       }).go();
       
-    return book
+    return book.data || null;
 }
