@@ -133,6 +133,7 @@ POST /notes/share (share note with another user)
 {
   "message": "Note shared successfully."
 }
+```
 GET /notes/shares (list all shares)
 
 ```json
