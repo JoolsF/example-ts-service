@@ -2,10 +2,25 @@
 
 Example TS Fastify-based web service, used for learning the TS language and related libraries.  
 
-It implements a simple task management backend with a REST api.  A GraphQL may be added for learning purposes even though it is probably overkill.  This could be used to simplify queries around, for example, tags on different notes.
+It implements a simple note taking app. With the following features:
+
+## Basic features
+* User login and authentication via JWT
+* Create a new note
+* Read / list existing notes
+* Update an existing note
+* Delete a note
+* Add tags to notes and list by tag
+
+## Advanced features
+* Create a new note via a URL.  Service scrapes the text from the site and persists it
+* Share note with another user
+* Note due date with alert to user on login when it is due.
 
 
-### TODO Dependencies
+See [API.md](API.md) for the API to implement.
+
+### TODO Dependencies to add
 
 Now
 
@@ -19,22 +34,7 @@ Later
   - [ ] ElectroDB (Dynamo)
   - [ ] dd-trace-js (tracing)
   - [ ] pino (logging)
-  - [ ] node-postgres
-
-### TODO Requirements
-
-Now
-- [x] Refactor to use type over interface and return function not class
-- [x] Simple note taking REST api
-- [ ] Persistence of retreived data to dynamo for caching
-- [ ] Github actions for dep management, linting etc
-
-Later
-  - [ ] User management
-  - [ ] Note tags
-  - [ ] Note 'due dates / alerts' e.g. a note can be tagged with a date to give the user a heads up on an event.  Background task
-  - [ ] GraphQL API
-  
+  - [ ] node-postgres  
 
 ## Docker
 
