@@ -2,7 +2,7 @@
 
 The below is an idea for a basic API to implement
 
-POST /auth/login (Logs in a user and returns a JWT)
+*POST /auth/login (Logs in a user and returns a JWT)*
 
 ```json 
 {
@@ -45,7 +45,7 @@ POST /notes (create a new note)
 }
 ```
 
-GET /notes (list all notes, paginated)
+GET /notes (list all notes, paginated, for an auth'd user)
 
 ```json
 [
