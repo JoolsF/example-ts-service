@@ -1099,6 +1099,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@js-joda/core@npm:^5.6.5":
+  version: 5.6.5
+  resolution: "@js-joda/core@npm:5.6.5"
+  checksum: 10c0/bad9d67736eb7dfbc99f09b2f485c63c4d64cad2661648be88028e777f93769767c41d6019c0a35ba6f55a1b9846666f3528ae8746496a9f1ed9b60eade174be
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -6734,6 +6741,7 @@ __metadata:
   dependencies:
     "@aws-sdk/client-dynamodb": "npm:^3.679.0"
     "@eslint/js": "npm:^9.9.0"
+    "@js-joda/core": "npm:^5.6.5"
     "@types/eslint": "npm:^9"
     "@types/node": "npm:^22.2.0"
     aws-sdk: "npm:^2.1691.0"
@@ -6750,6 +6758,7 @@ __metadata:
     typescript-eslint: "npm:^8.1.0"
     vitest: "npm:^2.0.5"
     yarn-check: "npm:^0.0.3"
+    zod: "npm:^3.24.3"
   languageName: unknown
   linkType: soft
 
@@ -7358,5 +7367,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.3":
+  version: 3.24.3
+  resolution: "zod@npm:3.24.3"
+  checksum: 10c0/ab0369810968d0329a1a141e9418e01e5c9c2a4905cbb7cb7f5a131d6e9487596e1400e21eeff24c4a8ee28dacfa5bd6103893765c055b7a98c2006a5a4fc68d
   languageName: node
   linkType: hard

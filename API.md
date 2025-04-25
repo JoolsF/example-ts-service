@@ -27,7 +27,7 @@ POST /auth/register (Registers a new user)
 }
 ```
 
-POST /notes (create a new note)
+POST /note (create a new note)
 
 ```json
 {
@@ -48,14 +48,16 @@ POST /notes (create a new note)
 GET /notes (list all notes, paginated, for an auth'd user)
 
 ```json
-[
-  {
-    "id": "note_id",
-    "title": "string",
-    "tags": ["string"],
-    "createdAt": "timestamp"
-  }
-]
+{
+  [
+    {
+      "id": "note_id",
+      "title": "string",
+      "tags": ["string"],
+      "createdAt": "timestamp"
+    }
+  ]
+}
 ```
 
 GET /notes/:id (get note by id)
