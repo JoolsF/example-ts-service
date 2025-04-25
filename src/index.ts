@@ -1,6 +1,7 @@
 import Fastify, { type FastifyInstance } from 'fastify';
 
 import { registerApiRoutes } from './routes';
+import { getNoteService } from './note-service';
 
 const start = async () => {
 
@@ -8,7 +9,9 @@ const start = async () => {
         logger: true
     });
 
-    await registerApiRoutes({server})
+    const noteService = getNoteService()
+
+    await registerApiRoutes({server, noteService})
 
     try {
         server.listen({ port: 3000, host: '0.0.0.0' })

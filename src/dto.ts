@@ -1,6 +1,6 @@
 import { Instant } from "@js-joda/core";
 
-type Note = {
+export type Note = {
     id: string;
     title: string;
     tags: string[];
@@ -12,4 +12,10 @@ type Notes = Note[]
 
 type NotesResponse = {
     notes: Notes;
+}
+
+export type CreateNoteRequest = {
+    title: string, 
+    context: string,
+    tags: string
 }
