@@ -2,6 +2,7 @@ import Fastify, { type FastifyInstance } from 'fastify';
 
 import { registerApiRoutes } from './routes';
 import { getNoteService } from './note-service';
+import fastifyJwt from '@fastify/jwt';
 
 const start = async () => {
 
@@ -10,6 +11,11 @@ const start = async () => {
     });
 
     const noteService = getNoteService()
+
+    await server.register(fastifyJwt, {
+        secret: 'supersecret' //TODO inject from ENV VAR
+    })
+
 
     await registerApiRoutes({server, noteService})
 

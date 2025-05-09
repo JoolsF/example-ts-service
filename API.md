@@ -90,7 +90,7 @@ PUT /notes/:id (update existing notes)
 }
 ```
 
-DELETE /notes/:id (delete a note)
+DELETE /notes/:id (soft delete a note)
 ```json
 {
   "message": "Note deleted successfully."

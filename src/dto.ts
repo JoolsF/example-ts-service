@@ -15,7 +15,19 @@ type NotesResponse = {
 }
 
 export type CreateNoteRequest = {
-    title: string, 
+    title: string,
     context: string,
     tags: string
 }
+type DbId = {
+    id: string
+}
+
+export type User = {
+    username: string,
+    password: string
+}
+
+export type UserWithId = User & DbId
+
+

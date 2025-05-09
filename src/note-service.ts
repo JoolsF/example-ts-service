@@ -9,7 +9,7 @@ export type NoteService = {
 }
 
 export function getNoteService(): NoteService {
-    const notes = new Map<string, Note>();
+    const notesDb = new Map<string, Note>();
     
     function createNote(req: CreateNoteRequest): Note {
         const id = randomUUID();
@@ -21,11 +21,11 @@ export function getNoteService(): NoteService {
             createdAt,
             lastUpdatedAt: createdAt
         };
-        notes.set(id, newNote);
+        notesDb.set(id, newNote);
         return newNote;
     }
     function getNote(id: string): Note | null {
-        return notes.get(id) || null;
+        return notesDb.get(id) || null;
     }
 
     return {
